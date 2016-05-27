@@ -1,0 +1,14 @@
+---
+layout: post
+title:  "Site images"
+date:   2016-05-20 12:45:53 +0100
+---
+
+<h1 class="heading-large">Images</h1>
+
+{% for image in site.static_files %}
+{% if image.path contains 'static/images' %}
+    <p>{{image.path}} - {{image.modified_time}}</p>
+    <img src="{{site.baseurl}}{{image.path}}" style="max-width: 100%;">
+{% endif %}
+{% endfor %}

@@ -1,0 +1,12 @@
+.column-three-quarters {
+  @include grid-column( 3/4 );
+}
+.column-seven-eights {
+  @include grid-column( 7/8 );
+}
+.column-fifth {
+  @include grid-column( 1/5 );
+}
+.column-four-fiths {
+  @include grid-column( 4/5 );
+}
