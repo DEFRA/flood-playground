@@ -22,6 +22,6 @@ Check that Jekyll has been successfully installed.
 
 Clone this repo
 
-`$ git clone https://github.com/davidjamesstone/gds-playground.git`  
-`$ cd gds-playground`  
+`$ git clone https://github.com/environmentagency/flood-playground.git`  
+`$ cd flood-playground`  
 `$ jekyll serve`  
