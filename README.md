@@ -1,4 +1,4 @@
-# gds-playground
+# flood-playground
 GOV.UK GDS themed Jekyll based static site
 
 # Local development
