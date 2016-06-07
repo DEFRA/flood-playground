@@ -117,7 +117,13 @@ published: true
 
     $(function () {
         $('img.forecast').each(function () {
-          $(this).attr('src', changeColour($(this).attr('src'), '#fff', '#000'))
+            var data = $(this).attr('src')
+            data = changeColour(data, '#A3D700', '#238400')
+            data = changeColour(data, '#DC7C10', '#FFA900')
+            data = changeColour(data, '#FFFF66', '#F6FF00')
+            data = changeColour(data, '#CC0033', '#F01616')
+            data = changeColour(data, '#FFFFFF', '#DDDDDD')
+            $(this).attr('src', data)
         })
     })
 </script>
