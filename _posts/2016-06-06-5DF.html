@@ -96,14 +96,14 @@ published: true
     }
 
     $(function () {
+        var green = getParameterByName('green') //'#238400'
+        var yellow =  getParameterByName('yellow') //'#F6FF00'
+        var orange =  getParameterByName('orange') //'#FFA900'
+        var red =  getParameterByName('red') //'#F01616'
+        var background =  getParameterByName('background') //'#DDDDDD'
+        
         $('img.forecast').each(function () {
             var data = $(this).attr('src')
-
-            var green = getParameterByName('green') //'#238400'
-            var yellow =  getParameterByName('yellow') //'#F6FF00'
-            var orange =  getParameterByName('orange') //'#FFA900'
-            var red =  getParameterByName('red') //'#F01616'
-            var background =  getParameterByName('background') //'#DDDDDD'
             
             if (green) {
                 data = changeColour(data, '#A3D700', green)
