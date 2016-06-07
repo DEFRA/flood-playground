@@ -34,6 +34,15 @@ published: true
 </div>
 
 <script>
+    function getParameterByName(name, url) {
+        if (!url) url = window.location.href;
+        name = name.replace(/[\[\]]/g, "\\$&");
+        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
     function hexToRGB (hexStr) {
       var col = {}
       col.r = parseInt(hexStr.substr(1, 2), 16)
@@ -89,11 +98,12 @@ published: true
     $(function () {
         $('img.forecast').each(function () {
             var data = $(this).attr('src')
-            var green =  '#238400'
-            var yellow =  '#F6FF00'
-            var orange =  '#FFA900'
-            var red =  '#F01616'
-            var background =  '#DDDDDD'
+
+            var green = getParameterByName('green') //'#238400'
+            var yellow =  getParameterByName('yellow') //'#F6FF00'
+            var orange =  getParameterByName('orange') //'#FFA900'
+            var red =  getParameterByName('red') //'#F01616'
+            var background =  getParameterByName('background') //'#DDDDDD'
             
             if (green) {
                 data = changeColour(data, '#A3D700', green)
